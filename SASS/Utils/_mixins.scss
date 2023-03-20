@@ -1,0 +1,13 @@
+/*****Media Queries*****/
+
+@mixin touchpad {
+    @media (min-width: 426px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 769px) {
+        @content;
+    }
+}
