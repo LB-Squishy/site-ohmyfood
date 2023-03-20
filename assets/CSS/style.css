@@ -5,6 +5,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
@@ -26,7 +27,63 @@ p {
   margin: 0;
 }
 
-/*****Color list*****/ /*****Media Queries*****/
+/*****Color list*****/ /*****Media Queries*****/ /*****search-loc*****/
+.search-loc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 50px;
+  width: auto;
+  background-color: #eaeaea;
+}
+.search-loc__dot {
+  position: relative;
+  right: 17px;
+  color: #353535;
+}
+.search-loc__area--style {
+  width: 109px;
+  background-color: #eaeaea;
+  color: #353535;
+}
+.search-loc__area--style::placeholder {
+  outline: none;
+  color: #353535;
+}
+.search-loc__area input {
+  outline: none;
+  border: none;
+  color: #353535;
+  font-size: 16px;
+}
+
+/*****header*****/
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 63px;
+  box-shadow: 0 2px 4px #353535;
+}
+.header-container__logo {
+  width: auto;
+  height: 34px;
+}
+.header-container__arrow {
+  position: absolute;
+  left: 23px;
+}
+
+.fa-arrow-left {
+  color: #000000;
+  visibility: hidden;
+}
+
+/*****footer*****/
 .footer-container {
   display: flex;
   width: 100%;

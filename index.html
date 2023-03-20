@@ -13,14 +13,20 @@
 </head>
 <body>    
     <header class="header-container">
-        <nav class="nav-container">
+        <img class="header-container__logo" src="./assets/images/logo/ohmyfood.png" alt="logo de oh my food">
+        <nav class="header-container__arrow">
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#"><i class="fa-solid fa-arrow-left"></i></a></li>
             </ul>          
         </nav>
     </header>
     <main>
+        <div class="search-loc">
+            <i class="search-loc__dot fa-solid fa-location-dot"></i>
+            <form class="search-loc__area" method="get" action="#">
+                <input class="search-loc__area--style" type="text" name="recherche" placeholder="Paris, Belleville">
+            </form>
+        </div>
         <section class="nom-section">
             <article class="nom-article">          
             </article>

@@ -7,10 +7,13 @@
 @import "./Utils/extensions";
 
 @import "./Components/buttons";
-@import "./Components/carousel";
+@import "./Components/search-location";
 
 @import "./Layouts/header";
 @import "./Layouts/nav";
 @import "./Layouts/article";
 @import "./Layouts/form";
 @import "./Layouts/footer";
+
+@import "./Pages/homepage";
+@import "./Pages/restaurants";
