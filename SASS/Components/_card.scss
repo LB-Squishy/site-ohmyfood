@@ -1,0 +1,23 @@
+/***** FonctionnementCard *****/
+
+.fonctionnement-card {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: $background-grey;
+    width: 322px;
+    height: 72px;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    color: $black;
+    font-weight: 500;
+    padding-left: 34px;
+    padding-right: 20px;
+    .fa-solid {
+        color: $grey;
+        margin-right: 20px;
+    }
+    .fa-store {
+        color: $primary;
+    }
+}

@@ -27,11 +27,6 @@ p {
   margin: 0;
 }
 
-h1 {
-  font-size: 24px;
-  margin: 0;
-}
-
 /***** Color list *****/
 /***** Shadow list *****/
 /*****Media Queries*****/ /***** OrderButton *****/
@@ -50,6 +45,29 @@ h1 {
 .order-button:hover {
   opacity: 85%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/***** FonctionnementCard *****/
+.fonctionnement-card {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  width: 322px;
+  height: 72px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  color: #000000;
+  font-weight: 500;
+  padding-left: 34px;
+  padding-right: 20px;
+}
+.fonctionnement-card .fa-solid {
+  color: #353535;
+  margin-right: 20px;
+}
+.fonctionnement-card .fa-store {
+  color: #9356dc;
 }
 
 /*****header*****/
@@ -178,8 +196,10 @@ h1 {
   background-color: #f7f7f7;
 }
 .reservation__title {
-  margin-top: 39px;
+  font-size: 24px;
   font-weight: 700;
+  margin: 0;
+  margin-top: 39px;
 }
 .reservation__text {
   font-size: 18px;
@@ -188,6 +208,41 @@ h1 {
 }
 .reservation__button {
   margin: 30px auto 57px auto;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 68px;
+}
+.fonctionnement__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 50px 0 0 20px;
+}
+.fonctionnement__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 25px 32px 0 32px;
+  position: relative;
+}
+.fonctionnement__card--number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #9356dc;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  position: absolute;
+  left: -12px;
+}
+.fonctionnement__card--color {
+  background-color: #f5edff;
 }
 
 /*# sourceMappingURL=style.css.map */
