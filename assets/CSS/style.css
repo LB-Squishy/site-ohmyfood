@@ -27,7 +27,56 @@ p {
   margin: 0;
 }
 
-/*****Color list*****/ /*****Media Queries*****/ /*****search-loc*****/
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/***** Color list *****/
+/***** Shadow list *****/
+/*****Media Queries*****/ /***** OrderButton *****/
+.order-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 500;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.order-button:hover {
+  opacity: 85%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/*****header*****/
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 63px;
+  box-shadow: 0 2px 4px #353535;
+}
+.header-container__logo {
+  width: auto;
+  height: 34px;
+}
+.header-container__arrow {
+  position: absolute;
+  left: 23px;
+}
+
+.fa-arrow-left {
+  color: #000000;
+  visibility: hidden;
+}
+
+/***** search-loc *****/
 .search-loc {
   display: flex;
   justify-content: center;
@@ -57,30 +106,6 @@ p {
   border: none;
   color: #353535;
   font-size: 16px;
-}
-
-/*****header*****/
-.header-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  height: 63px;
-  box-shadow: 0 2px 4px #353535;
-}
-.header-container__logo {
-  width: auto;
-  height: 34px;
-}
-.header-container__arrow {
-  position: absolute;
-  left: 23px;
-}
-
-.fa-arrow-left {
-  color: #000000;
-  visibility: hidden;
 }
 
 /*****footer*****/
@@ -142,6 +167,27 @@ p {
 }
 .footer-link__light-font {
   font-weight: 400;
+}
+
+/***** reservation *****/
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+.reservation__title {
+  margin-top: 39px;
+  font-weight: 700;
+}
+.reservation__text {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.reservation__button {
+  margin: 30px auto 57px auto;
 }
 
 /*# sourceMappingURL=style.css.map */

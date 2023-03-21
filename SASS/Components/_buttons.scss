@@ -1,0 +1,20 @@
+/***** OrderButton *****/
+
+.order-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: $white;
+    font-weight: 500;
+
+    background: linear-gradient(0deg, $primary, $secondary);
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: $shadow;
+    &:hover {
+        opacity: 85%;
+        box-shadow: $shadow-hover;
+    }
+}

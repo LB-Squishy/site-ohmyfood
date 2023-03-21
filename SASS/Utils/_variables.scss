@@ -1,11 +1,18 @@
-/*****Color list*****/
+/***** Color list *****/
 
 $light-green: #99e2d0;
 $green: #008766;
 $light-blue: #89c8fa;
 $blue: #003a68;
 $primary: #9356dc;
+$secondary: #ff79da;
 $light-grey: #eaeaea;
+$background-grey: #f7f7f7;
 $grey: #353535;
 $white: #ffffff;
 $black: #000000;
+
+/***** Shadow list *****/
+
+$shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+$shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.8);
