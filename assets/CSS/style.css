@@ -4,11 +4,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
   font-size: 16px;
   margin: 0;
 }
@@ -21,6 +16,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 p {
@@ -53,7 +49,7 @@ p {
   align-items: center;
   box-sizing: border-box;
   background-color: #f7f7f7;
-  width: 322px;
+  width: 100%;
   height: 72px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -68,6 +64,53 @@ p {
 }
 .fonctionnement-card .fa-store {
   color: #9356dc;
+}
+
+/***** restaurantsCard *****/
+.restaurant-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.restaurant-card__photo {
+  object-fit: cover;
+  width: 100%;
+  height: 173px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.restaurant-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 12px 0 0 12px;
+}
+.restaurant-card__content {
+  font-weight: 300;
+  margin: 5px 0 12px 12px;
+}
+.restaurant-card__heart {
+  font-size: 22px;
+  position: absolute;
+  bottom: 35px;
+  left: 88%;
+}
+.restaurant-card__new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 200px;
+  left: 72%;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #99e2d0;
+  width: 80px;
+  height: 30px;
 }
 
 /*****header*****/
@@ -243,6 +286,21 @@ p {
 }
 .fonctionnement__card--color {
   background-color: #f5edff;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding: 34px 20px 64px 20px;
+}
+.restaurants__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.restaurants__list {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

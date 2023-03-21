@@ -5,7 +5,7 @@
     align-items: center;
     box-sizing: border-box;
     background-color: $background-grey;
-    width: 322px;
+    width: 100%;
     height: 72px;
     border-radius: 20px;
     box-shadow: $shadow;
@@ -19,5 +19,53 @@
     }
     .fa-store {
         color: $primary;
+    }
+}
+
+/***** restaurantsCard *****/
+
+.restaurant-card {
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    &__photo {
+        object-fit: cover;
+        width: 100%;
+        height: 173px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 12px 0 0 12px;
+    }
+    &__content {
+        font-weight: 300;
+        margin: 5px 0 12px 12px;
+    }
+    &__heart {
+        font-size: 22px;
+        position: absolute;
+        bottom: 35px;
+        left: 88%;
+    }
+    &__new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 200px;
+        left: 72%;
+        color: $green;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: $light-green;
+        width: 80px;
+        height: 30px;
     }
 }

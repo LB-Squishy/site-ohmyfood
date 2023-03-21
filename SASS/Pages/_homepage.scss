@@ -56,3 +56,18 @@
         }
     }
 }
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-grey;
+    padding: 34px 20px 64px 20px;
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+    &__list {
+        margin-top: 20px;
+    }
+}
