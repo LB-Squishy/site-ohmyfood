@@ -1,6 +1,4 @@
-/***** OrderButton *****/
-
-.order-button {
+.button-order {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,4 +15,16 @@
         opacity: 85%;
         box-shadow: $shadow-hover;
     }
+}
+
+.button-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $green;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $light-green;
+    width: 80px;
+    height: 30px;
 }

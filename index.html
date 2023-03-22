@@ -30,27 +30,27 @@
         <section class="reservation">
             <h1 class="reservation__title">Réservez le menu qui vous convient</h1>
             <p class="reservation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#restaurants" class="reservation__button order-button">Explorer nos restaurants</a>
+            <a href="#restaurants" class="reservation__button button-order">Explorer nos restaurants</a>
         </section>
         <section class="fonctionnement">
             <h2 class="fonctionnement__title">Fonctionnement</h2>
             <div class="fonctionnement__card">
                 <p class="fonctionnement__card--number">1</p>
-                <div class="fonctionnement-card">
+                <div class="card-fonctionnement">
                     <i class="fa-solid fa-mobile-screen"></i>
                     <p>Choisissez un restaurant</p>
                 </div>
             </div>
             <div class="fonctionnement__card">
                 <p class="fonctionnement__card--number">2</p>
-                <div class="fonctionnement-card">
+                <div class="card-fonctionnement">
                     <i class="fa-solid fa-bars"></i>
                     <p>Composez votre menu</p>
                 </div>
             </div>
             <div class="fonctionnement__card">
                 <p class="fonctionnement__card--number">3</p>
-                <div class="fonctionnement__card--color fonctionnement-card">
+                <div class="fonctionnement__card--color card-fonctionnement">
                     <i class="fa-solid fa-store"></i>
                     <p>Dégustez au restaurant</p>
                 </div>
@@ -58,38 +58,62 @@
         </section>
         <section class="restaurants" id="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
-            <article class="restaurants__list restaurant-card">
+            <article class="card-restaurant">
                 <a href="#">
-                    <img class="restaurant-card__photo" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant">
-                    <h3 class="restaurant-card__title">La palette du goût</h3>
-                    <p class="restaurant-card__content">Ménilmontant</p>
-                    <i class="restaurant-card__heart fa-regular fa-heart"></i>
-                    <p class="restaurant-card__new">Nouveau</p>
+                    <img class="card-restaurant__photo" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant">
+                    <div class="card-restaurant__content">
+                        <div class="card-restaurant__content--text">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="card-restaurant__content--tag">
+                            <i class="fa-regular fa-heart"></i>
+                            <p class="button-new">Nouveau</p>
+                        </div>
+                    </div>
                 </a>
             </article>
-            <article class="restaurants__list restaurant-card">
+            <article class="card-restaurant">
                 <a href="#">
-                    <img class="restaurant-card__photo" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant">
-                    <h3 class="restaurant-card__title">La note enchantée</h3>
-                    <p class="restaurant-card__content">Charonne</p>
-                    <i class="restaurant-card__heart fa-regular fa-heart"></i>
-                    <p class="restaurant-card__new">Nouveau</p>
+                    <img class="card-restaurant__photo" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant">
+                    <div class="card-restaurant__content">
+                        <div class="card-restaurant__content--text">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <div class="card-restaurant__content--tag">
+                            <i class="fa-regular fa-heart"></i>
+                            <p class="button-new">Nouveau</p>
+                        </div>
+                    </div>
                 </a>
             </article>
-            <article class="restaurants__list restaurant-card">
+            <article class="card-restaurant">
                 <a href="#">
-                    <img class="restaurant-card__photo" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant">
-                    <h3 class="restaurant-card__title">A la française</h3>
-                    <p class="restaurant-card__content">Cité Rouge</p>
-                    <i class="restaurant-card__heart fa-regular fa-heart"></i>
+                    <img class="card-restaurant__photo" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant">
+                    <div class="card-restaurant__content">
+                        <div class="card-restaurant__content--text">
+                            <h3>A la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <div class="card-restaurant__content--tag">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
                 </a>
             </article>
-            <article class="restaurants__list restaurant-card">
+            <article class="card-restaurant">
                 <a href="#">
-                    <img class="restaurant-card__photo" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant">
-                    <h3 class="restaurant-card__title">Le délice des sens</h3>
-                    <p class="restaurant-card__content">Folie-Méricourt</p>
-                    <i class="restaurant-card__heart fa-regular fa-heart"></i>
+                    <img class="card-restaurant__photo" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant">
+                    <div class="card-restaurant__content">
+                        <div class="card-restaurant__content--text">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="card-restaurant__content--tag">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
                 </a>
             </article>
         </section>
