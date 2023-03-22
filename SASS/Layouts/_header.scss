@@ -5,10 +5,9 @@
     position: relative;
     z-index: 2;
     height: 63px;
-    box-shadow: 0 2px 4px $grey;
     &__logo {
         width: auto;
-        height: 34px;
+        height: 30px;
     }
     &__arrow {
         position: absolute;
@@ -16,7 +15,15 @@
     }
 }
 
-.fa-arrow-left {
-    color: $black;
+.header-shadow {
+    box-shadow: 0 2px 4px $grey;
+}
+
+.fa-arrow-hidden {
     visibility: hidden;
+}
+
+.fa-arrow-visible {
+    color: $grey;
+    visibility: visible;
 }
