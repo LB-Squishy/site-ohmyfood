@@ -84,8 +84,10 @@ h1, h2, h3, p {
   position: relative;
 }
 .card-restaurant:hover {
-  opacity: 65%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+.card-restaurant:hover img {
+  opacity: 65%;
 }
 .card-restaurant__photo {
   object-fit: cover;
@@ -125,6 +127,54 @@ h1, h2, h3, p {
 .card-restaurant__content--tag p {
   position: relative;
   bottom: 200px;
+}
+
+.card-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 12px;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 68px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.card-menu:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+.card-menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100%;
+  width: 274px;
+  padding: 12px 0 12px 10px;
+}
+.card-menu__content--title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.card-menu__content--text {
+  font-size: 15px;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-menu__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 20px 12px 0;
+}
+.card-menu__price--text {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .header-container {
