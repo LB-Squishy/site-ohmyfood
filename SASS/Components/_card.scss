@@ -32,6 +32,9 @@
     &:hover img {
         opacity: 65%;
     }
+    @include touchpad {
+        width: 100%;
+    }
     &__photo {
         object-fit: cover;
         width: 100%;

@@ -56,14 +56,22 @@
 }
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 251px;
+    grid-gap: 20px;
     background-color: $background-grey;
     padding: 34px 20px 64px 20px;
     &__title {
         font-size: 24px;
         font-weight: 700;
         margin: 20px 0;
+    }
+    @include touchpad{
+        grid-template-columns: 1fr 1fr;
+        &__title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
     }
 }

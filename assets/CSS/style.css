@@ -89,6 +89,11 @@ h1, h2, h3, p {
 .card-restaurant:hover img {
   opacity: 65%;
 }
+@media (min-width: 768px) {
+  .card-restaurant {
+    width: 100%;
+  }
+}
 .card-restaurant__photo {
   object-fit: cover;
   width: 100%;
@@ -245,7 +250,7 @@ h1, h2, h3, p {
   background-color: #353535;
   color: #ffffff;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .footer-container {
     justify-content: flex-end;
     height: 114px;
@@ -257,9 +262,14 @@ h1, h2, h3, p {
   flex-direction: column;
   margin: auto 25px;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .footer-content {
     flex-direction: row-reverse;
+    align-items: baseline;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-content {
     margin: auto 80px;
   }
 }
@@ -268,13 +278,12 @@ h1, h2, h3, p {
   font-size: 18px;
   margin: 0 0 16px 0;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .footer-content__title {
-    align-self: center;
-    margin: 0 30px 0 0;
+    margin: 0;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .footer-content__list {
     display: flex;
     flex-direction: row;
@@ -282,7 +291,7 @@ h1, h2, h3, p {
   }
 }
 .footer-content__list--position {
-  margin: 4px 40px 4px auto;
+  margin: 4px 20px 4px auto;
 }
 
 .footer-link {
@@ -356,9 +365,10 @@ h1, h2, h3, p {
 }
 
 .restaurants {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 251px;
+  grid-gap: 20px;
   background-color: #f7f7f7;
   padding: 34px 20px 64px 20px;
 }
@@ -366,6 +376,15 @@ h1, h2, h3, p {
   font-size: 24px;
   font-weight: 700;
   margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
+  .restaurants__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .photo-restaurant {
