@@ -21,20 +21,36 @@
 }
 
 .fonctionnement {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 72px;
+    grid-gap: 37px;
     padding-bottom: 68px;
+    @include desktop {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        width: 980px;
+    }
     &__title {
         font-size: 24px;
         font-weight: 700;
         margin: 50px 0 0 20px;
+        @include desktop {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-left: 0;
+        }
     }
     &__card {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 25px 32px 0 32px;
+        margin: 0 32px;
         position: relative;
+        @include desktop {
+            margin: 0 12px 0 0;
+            left: 12px;
+        }
         &--number {
             display: flex;
             align-items: center;
@@ -56,22 +72,29 @@
 }
 
 .restaurants {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 251px;
-    grid-gap: 20px;
     background-color: $background-grey;
-    padding: 34px 20px 64px 20px;
+    padding: 14px 20px 64px 20px;   
     &__title {
         font-size: 24px;
         font-weight: 700;
-        margin: 20px 0;
+        margin: 40px 0;
+        @include desktop {
+            width: 980px;
+            margin: 40px auto;
+        }
     }
-    @include touchpad{
-        grid-template-columns: 1fr 1fr;
-        &__title {
-            grid-column-start: 1;
-            grid-column-end: 3;
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 251px;
+        grid-gap: 20px;
+        @include touchpad {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include desktop {
+            width: 980px;
+            margin: 0 auto;
+            grid-gap: 32px;
         }
     }
 }
