@@ -5,6 +5,9 @@
     position: relative;
     z-index: 2;
     height: 63px;
+    @include touchpad {
+        height: 96px;
+    }
     &__logo {
         width: auto;
         height: 30px;
@@ -12,6 +15,9 @@
     &__arrow {
         position: absolute;
         left: 23px;
+        @include desktop {
+            left: 75px;
+        }
     }
 }
 

@@ -1,17 +1,12 @@
 @import "./Base/normalize";
-@import "./Base/typographie";
 
 @import "./Utils/variables";
 @import "./Utils/mixins";
-@import "./Utils/functions";
-@import "./Utils/extensions";
 
 @import "./Components/buttons";
 @import "./Components/card";
 
 @import "./Layouts/header";
-@import "./Layouts/nav";
-@import "./Layouts/article";
 @import "./Layouts/form";
 @import "./Layouts/footer";
 

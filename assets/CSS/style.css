@@ -139,7 +139,6 @@ h1, h2, h3, p {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  gap: 12px;
   background-color: #f7f7f7;
   width: 100%;
   height: 68px;
@@ -148,6 +147,7 @@ h1, h2, h3, p {
 }
 .card-menu:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 .card-menu__content {
   display: flex;
@@ -155,7 +155,7 @@ h1, h2, h3, p {
   justify-content: space-between;
   box-sizing: border-box;
   height: 100%;
-  width: 274px;
+  width: 80%;
   padding: 12px 0 12px 10px;
 }
 .card-menu__content--title {
@@ -175,6 +175,7 @@ h1, h2, h3, p {
   justify-content: flex-end;
   box-sizing: border-box;
   height: 100%;
+  width: 50px;
   padding: 0 20px 12px 0;
 }
 .card-menu__price--text {
@@ -190,6 +191,11 @@ h1, h2, h3, p {
   z-index: 2;
   height: 63px;
 }
+@media (min-width: 768px) {
+  .header-container {
+    height: 96px;
+  }
+}
 .header-container__logo {
   width: auto;
   height: 30px;
@@ -197,6 +203,11 @@ h1, h2, h3, p {
 .header-container__arrow {
   position: absolute;
   left: 23px;
+}
+@media (min-width: 1024px) {
+  .header-container__arrow {
+    left: 75px;
+  }
 }
 
 .header-shadow {
@@ -427,6 +438,12 @@ h1, h2, h3, p {
   position: absolute;
   top: 63px;
 }
+@media (min-width: 768px) {
+  .photo-restaurant {
+    height: 423px;
+    top: 96px;
+  }
+}
 
 .restaurant-menu {
   display: flex;
@@ -442,12 +459,30 @@ h1, h2, h3, p {
   padding: 40px 13px;
   margin-top: 220px;
 }
+@media (min-width: 768px) {
+  .restaurant-menu {
+    margin-top: 343px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant-menu {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .restaurant-menu__title {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+}
+@media (min-width: 768px) {
+  .restaurant-menu__title {
+    justify-content: center;
+    gap: 24px;
+  }
 }
 .restaurant-menu__title--text {
   font-family: "Shrikhand", cursive;
@@ -464,6 +499,11 @@ h1, h2, h3, p {
   flex-direction: column;
   width: 100%;
   gap: 12px;
+}
+@media (min-width: 768px) {
+  .menu {
+    width: 634px;
+  }
 }
 .menu__title {
   display: flex;
