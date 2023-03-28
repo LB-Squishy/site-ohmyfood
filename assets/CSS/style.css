@@ -84,17 +84,32 @@ h1, h2, h3, p {
 }
 
 .card-restaurant {
+  position: relative;
+  z-index: 1;
   background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   width: 100%;
-  position: relative;
+  height: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
-.card-restaurant:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+.card-restaurant:hover::after {
+  opacity: 1;
 }
 .card-restaurant:hover img {
-  opacity: 65%;
+  opacity: 0.7;
+  transition: opacity 400ms;
+}
+.card-restaurant::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 250px;
+  opacity: 0;
+  transition: opacity 400ms;
 }
 @media (min-width: 768px) {
   .card-restaurant {
@@ -146,6 +161,8 @@ h1, h2, h3, p {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
   background-color: #f7f7f7;
   width: 100%;
   height: 68px;
@@ -153,8 +170,26 @@ h1, h2, h3, p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 .card-menu:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   cursor: pointer;
+}
+.card-menu:hover::after {
+  opacity: 1;
+}
+.card-menu::after {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 68px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 400ms;
 }
 .card-menu__content {
   display: flex;

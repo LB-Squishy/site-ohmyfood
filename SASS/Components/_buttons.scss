@@ -14,11 +14,13 @@
     height: 50px;
     border-radius: 25px;
     box-shadow: $shadow;
+    
     &:hover {
         &::after {
             opacity: 1;
         }
     }
+
     &::after {
         display: flex;
         justify-content: center;
