@@ -17,3 +17,8 @@ $black: #000000;
 
 $shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 $shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.8);
+
+/***** Gradiant *****/
+
+$btn-gradiant: linear-gradient(0deg, $primary, $secondary);
+$light-btn-gradiant: linear-gradient(0deg, lighten($primary, 5%), lighten($secondary,5%));

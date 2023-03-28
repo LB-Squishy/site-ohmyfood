@@ -24,11 +24,14 @@ h1, h2, h3, p {
 
 /***** Color list *****/
 /***** Shadow list *****/
+/***** Gradiant *****/
 /*****Media Queries*****/
-.button-order {
+.btn-order {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
   color: #ffffff;
   font-weight: 500;
   background: linear-gradient(0deg, #9356dc, #ff79da);
@@ -37,21 +40,25 @@ h1, h2, h3, p {
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
-.button-order:hover {
-  opacity: 85%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+.btn-order:hover::after {
+  opacity: 1;
 }
-
-.button-new {
+.btn-order::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #008766;
-  font-size: 14px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  color: #ffffff;
   font-weight: 500;
-  background-color: #99e2d0;
-  width: 80px;
-  height: 30px;
+  background: linear-gradient(0deg, #a16be0, #ff93e1);
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 400ms;
 }
 
 .card-fonctionnement {
@@ -181,6 +188,18 @@ h1, h2, h3, p {
 .card-menu__price--text {
   font-size: 15px;
   font-weight: 700;
+}
+
+.card-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #99e2d0;
+  width: 80px;
+  height: 30px;
 }
 
 .header-container {

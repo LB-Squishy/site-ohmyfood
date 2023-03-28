@@ -1,30 +1,43 @@
-.button-order {
+.btn-order {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    z-index: 1;
     
     color: $white;
     font-weight: 500;
 
-    background: linear-gradient(0deg, $primary, $secondary);
+    background: $btn-gradiant;
     width: 218px;
     height: 50px;
     border-radius: 25px;
     box-shadow: $shadow;
     &:hover {
-        opacity: 85%;
-        box-shadow: $shadow-hover;
+        &::after {
+            opacity: 1;
+        }
     }
-}
+    &::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        content: "";
+        position: absolute;
+        z-index: -1;
+        
+        color: $white;
+        font-weight: 500;
+    
+        background: $light-btn-gradiant;
+        width: 218px;
+        height: 50px;
+        border-radius: 25px;
+        box-shadow: $shadow-hover;
 
-.button-new {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $green;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: $light-green;
-    width: 80px;
-    height: 30px;
+        opacity: 0;
+        transition: opacity 400ms;
+    }
 }

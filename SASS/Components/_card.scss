@@ -124,3 +124,15 @@
         }
     }
 }
+
+.card-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $green;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $light-green;
+    width: 80px;
+    height: 30px;
+}
