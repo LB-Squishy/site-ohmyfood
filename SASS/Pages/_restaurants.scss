@@ -58,6 +58,8 @@
     flex-direction: column;
     width: 100%;
     gap: 12px;
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
     @include touchpad {
         width: 634px;
     }
@@ -74,4 +76,16 @@
             height: 5px;
         }
     }  
+}
+
+.animation {
+    &-entrees {
+    animation: menu-opening 1s forwards ease-in-out;
+    }
+    &-plats {
+    animation: menu-opening 1s forwards ease-in-out 1s;
+    }
+    &-desserts {
+    animation: menu-opening 1s forwards ease-in-out 2s;
+    }
 }
