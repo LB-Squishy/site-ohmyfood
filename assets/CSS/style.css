@@ -309,6 +309,7 @@ h1, h2, h3, p {
 }
 .loader__logo path {
   fill: #9356dc;
+  stroke: #000000;
 }
 
 .header-container {
