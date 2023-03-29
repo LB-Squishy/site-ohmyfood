@@ -15,3 +15,12 @@
         transform: translateX(-59px);
     }
 }
+
+@keyframes loader-opacity{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0); 
+    }
+}
