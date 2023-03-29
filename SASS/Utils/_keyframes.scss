@@ -1,8 +1,17 @@
 @keyframes menu-opening{
     from {
-        transform: scaleX(0);   
+        transform: scale(0); 
     }
     to {
-        transform: scaleX(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes price-moove{
+    from {
+        transform: translateX(0); 
+    }
+    to {
+        transform: translateX(-59px);
     }
 }

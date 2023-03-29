@@ -21,6 +21,9 @@
                 outline: none;
                 color: $grey;             
             }
+            &:focus {
+                color: $primary;
+            }
         }
         & input { 
             outline: none;          

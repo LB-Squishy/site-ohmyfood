@@ -35,9 +35,8 @@
         &::after {
             opacity: 1;
         }
-        img {
+        .card-restaurant__photo {
             opacity: 0.7;
-            transition: opacity 400ms;
         }
     }
     
@@ -65,6 +64,7 @@
         height: 173px;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
+        transition: opacity 400ms;
     }
     &__content {
         display: flex;
@@ -114,12 +114,7 @@
     height: 68px;
     border-radius: 15px;
     box-shadow: $shadow;
-    &:hover {
-        cursor: pointer;
-        &::after {
-            opacity: 1;
-        }
-    }
+    overflow: hidden;
     &::after {
         display: flex;
         justify-content: space-between;
@@ -138,6 +133,15 @@
 
         opacity: 0;
         transition: opacity 400ms;
+    }
+    &:hover {
+        cursor: pointer;
+        &::after {
+            opacity: 1;
+        }
+        .card-menu__price, .card-menu__validate {
+            transform: translateX(-59px);
+        }
     }
     &__content {
         display: flex;
@@ -164,12 +168,42 @@
         flex-direction: column;
         justify-content: flex-end;
         box-sizing: border-box;
+        background-color: $background-grey;
         height: 100%;
         width: 50px;
         padding: 0 20px 12px 0;
+        transform: translateX(0);
+        transition: transform 1s 0.3s;
         &--text {
             font-size: 15px;
             font-weight: 700;
+            margin-left: 10px;
+        }
+    }
+    &__validate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    
+        position: absolute;
+        left: 100%;
+        z-index: 1;
+    
+        background-color: $light-green;
+        width: 59px;
+        height: 68px;
+
+        transform: translateX(0);
+        transition: transform 1s 1s;
+        &--fa {
+            display: flex;
+            width: 23px;
+            height: 23px;
+            border-radius: 12px;
+            background-color: $white;
+            color: $light-green;
+            font-size: 24px;
         }
     }
 }
