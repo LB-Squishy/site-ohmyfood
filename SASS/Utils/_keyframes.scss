@@ -7,15 +7,6 @@
     }
 }
 
-@keyframes price-moove{
-    from {
-        transform: translateX(0); 
-    }
-    to {
-        transform: translateX(-59px);
-    }
-}
-
 /***** Loader *****/
 
 @keyframes loader-timer{

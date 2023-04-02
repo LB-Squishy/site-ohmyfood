@@ -43,3 +43,25 @@
         transition: opacity 400ms;
     }
 }
+
+.heart {
+    &-unchecked {
+        position: relative;
+    }
+    &-checked {
+        position: absolute;
+        transform: translateX(-100%);
+        background: linear-gradient(180deg, $primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+            transition: opacity 400ms;
+        }
+    }   
+}
+
+
+

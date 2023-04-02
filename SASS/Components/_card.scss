@@ -88,9 +88,6 @@
             text-align: right;
             i {
                 font-size: 22px;
-                position: relative;
-                right: 10px;
-                top: 5px;
             }
             p {              
                 position: relative;
@@ -173,7 +170,7 @@
         width: 50px;
         padding: 0 20px 12px 0;
         transform: translateX(0);
-        transition: transform 1s 0.3s;
+        transition: transform 0.7s;
         &--text {
             font-size: 15px;
             font-weight: 700;
@@ -195,7 +192,7 @@
         height: 68px;
 
         transform: translateX(0);
-        transition: transform 1s 1s;
+        transition: transform 0.7s;
         &--fa {
             display: flex;
             width: 23px;

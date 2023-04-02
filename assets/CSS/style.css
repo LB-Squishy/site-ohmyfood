@@ -35,14 +35,6 @@ h1, h2, h3, p {
     transform: scale(1);
   }
 }
-@keyframes price-moove {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-59px);
-  }
-}
 /***** Loader *****/
 @keyframes loader-timer {
   from {
@@ -109,6 +101,23 @@ h1, h2, h3, p {
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.281);
   opacity: 0;
+  transition: opacity 400ms;
+}
+
+.heart-unchecked {
+  position: relative;
+}
+.heart-checked {
+  position: absolute;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.heart-checked:hover {
+  opacity: 1;
   transition: opacity 400ms;
 }
 
@@ -198,9 +207,6 @@ h1, h2, h3, p {
 }
 .card-restaurant__content--tag i {
   font-size: 22px;
-  position: relative;
-  right: 10px;
-  top: 5px;
 }
 .card-restaurant__content--tag p {
   position: relative;
@@ -276,7 +282,7 @@ h1, h2, h3, p {
   width: 50px;
   padding: 0 20px 12px 0;
   transform: translateX(0);
-  transition: transform 1s 0.3s;
+  transition: transform 0.7s;
 }
 .card-menu__price--text {
   font-size: 15px;
@@ -295,7 +301,7 @@ h1, h2, h3, p {
   width: 59px;
   height: 68px;
   transform: translateX(0);
-  transition: transform 1s 1s;
+  transition: transform 0.7s;
 }
 .card-menu__validate--fa {
   display: flex;
