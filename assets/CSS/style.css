@@ -111,9 +111,11 @@ h1, h2, h3, p {
   position: absolute;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #9356dc, #ff79da);
+  -moz-background: linear-gradient(180deg, #9356dc, #ff79da);
   background-clip: text;
-  -webkit-background-clip: text;
+  -moz-background-clip: text;
   color: transparent;
+  -moz-color: transparent;
   opacity: 0;
 }
 .heart-checked:hover {
