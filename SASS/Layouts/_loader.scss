@@ -9,7 +9,7 @@
         content:"";
         position: absolute;
         z-index: -1;
-        width: 600px;
+        width: 300px;
         height: 130px;
         top: 50%;
         left: 50%;
@@ -17,11 +17,14 @@
         border-top: solid 2.5px $primary;
         border-bottom: solid 2.5px $primary;
         animation: loading-bar 3s forwards;
+        @include touchpad {
+            width: 600px;
+        }
     }
     &__logo {
         position: absolute;
         z-index: 1;
-        width: 600px;
+        width: 300px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -29,6 +32,9 @@
         fill: $white;
         stroke: $anime-grey;
         stroke-width: 1px;
+        @include touchpad {
+            width: 600px;
+        }
         & path:nth-child(1), path:nth-child(6), path:nth-child(7) {
             @include letters-anime;
             stroke-dasharray: 75px;
