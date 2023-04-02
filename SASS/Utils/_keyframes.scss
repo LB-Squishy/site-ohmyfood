@@ -16,6 +16,8 @@
     }
 }
 
+/***** Loader *****/
+
 @keyframes loader-timer{
     from {
         transform: scale(1);
@@ -25,30 +27,29 @@
     }
 }
 
-@keyframes stroke-anime {
-    to {
-        stroke-dashoffset: 0px;
-        stroke-dasharray: 180px;
-    }
-}
-
-@keyframes logo-color-anime {
+@keyframes loading-bar {
     0% {
         transform: translate(-50%, -50%) scaleX(0);
     }
     40% {
         transform: translate(-50%, -50%) scaleX(0.2);
     }
-    60% {
+    50% {
         transform: translate(-50%, -50%) scaleX(0.6);
     }
-    80% {
-        transform: translate(-50%, -50%) scaleX(0.7);
+    60% {
+        transform: translate(-50%, -50%) scaleX(0.8);
     }
     90% {
         transform: translate(-50%, -50%) scaleX(1);
     }
     100% {
         transform: translate(-50%, -50%) scaleX(1);
+    }
+}
+
+@keyframes stroke-anime {
+    to {
+        stroke-dashoffset: 0px;
     }
 }

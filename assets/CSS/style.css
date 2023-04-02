@@ -26,6 +26,7 @@ h1, h2, h3, p {
 /***** Shadow list *****/
 /***** Gradiant *****/
 /*****Media Queries*****/
+/***** Anime *****/
 @keyframes menu-opening {
   from {
     transform: scale(0);
@@ -42,6 +43,7 @@ h1, h2, h3, p {
     transform: translateX(-59px);
   }
 }
+/***** Loader *****/
 @keyframes loader-timer {
   from {
     transform: scale(1);
@@ -50,30 +52,29 @@ h1, h2, h3, p {
     transform: scale(0);
   }
 }
-@keyframes stroke-anime {
-  to {
-    stroke-dashoffset: 0px;
-    stroke-dasharray: 180px;
-  }
-}
-@keyframes logo-color-anime {
+@keyframes loading-bar {
   0% {
     transform: translate(-50%, -50%) scaleX(0);
   }
   40% {
     transform: translate(-50%, -50%) scaleX(0.2);
   }
-  60% {
+  50% {
     transform: translate(-50%, -50%) scaleX(0.6);
   }
-  80% {
-    transform: translate(-50%, -50%) scaleX(0.7);
+  60% {
+    transform: translate(-50%, -50%) scaleX(0.8);
   }
   90% {
     transform: translate(-50%, -50%) scaleX(1);
   }
   100% {
     transform: translate(-50%, -50%) scaleX(1);
+  }
+}
+@keyframes stroke-anime {
+  to {
+    stroke-dashoffset: 0px;
   }
 }
 .btn-order {
@@ -320,28 +321,11 @@ h1, h2, h3, p {
 
 .loader {
   position: fixed;
-  background-color: #ffffff;
+  z-index: 3;
   width: 100%;
   height: 100%;
-  z-index: 3;
-  animation: loader-timer 0s both 3s;
-}
-.loader__logo {
-  position: absolute;
-  z-index: 1;
-  width: 600px;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   background-color: #ffffff;
-}
-.loader__logo path {
-  fill: #ffffff;
-  stroke: #575757;
-  stroke-width: 1px;
-  stroke-dasharray: 180px;
-  stroke-dashoffset: 180px;
-  animation: stroke-anime 3s forwards;
+  animation: loader-timer 0s both 3s;
 }
 .loader::after {
   content: "";
@@ -349,12 +333,44 @@ h1, h2, h3, p {
   z-index: -1;
   width: 600px;
   height: 130px;
-  border-top: solid 2.5px #9356dc;
-  border-bottom: solid 2.5px #9356dc;
   top: 50%;
   left: 50%;
-  animation: logo-color-anime 3s forwards;
   transform-origin: 0% 50%;
+  border-top: solid 2.5px #9356dc;
+  border-bottom: solid 2.5px #9356dc;
+  animation: loading-bar 3s forwards;
+}
+.loader__logo {
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  fill: #ffffff;
+  stroke: #575757;
+  stroke-width: 1px;
+}
+.loader__logo path:nth-child(1), .loader__logo path:nth-child(6), .loader__logo path:nth-child(7) {
+  animation: stroke-anime 3s forwards;
+  stroke-dasharray: 75px;
+  stroke-dashoffset: 75px;
+}
+.loader__logo path:nth-child(5), .loader__logo path:nth-child(8) {
+  animation: stroke-anime 3s forwards;
+  stroke-dasharray: 115px;
+  stroke-dashoffset: 115px;
+}
+.loader__logo path:nth-child(2), .loader__logo path:nth-child(4) {
+  animation: stroke-anime 3s forwards;
+  stroke-dasharray: 135px;
+  stroke-dashoffset: 135px;
+}
+.loader__logo path:nth-child(3) {
+  animation: stroke-anime 3s forwards;
+  stroke-dasharray: 185px;
+  stroke-dashoffset: 185px;
 }
 
 .header-container {

@@ -1,38 +1,53 @@
 .loader {
     position: fixed;
-    background-color: $white;
+    z-index: 3;
     width: 100%;
     height: 100%;
-    z-index: 3;
+    background-color: $white;
     animation: loader-timer 0s both 3s;
-    &__logo {
-        position: absolute;
-        z-index: 1;
-        width: 600px;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        background-color: $white;
-        & path {
-            fill: $white;
-            stroke: $anime-grey;
-            stroke-width: 1px;
-            stroke-dasharray: 180px;
-            stroke-dashoffset: 180px;
-            animation: stroke-anime 3s forwards;
-        }
-    }
     &::after {
         content:"";
         position: absolute;
         z-index: -1;
         width: 600px;
         height: 130px;
-        border-top: solid 2.5px $primary;
-        border-bottom: solid 2.5px $primary;
         top: 50%;
         left: 50%;
-        animation: logo-color-anime 3s forwards;
         transform-origin: 0% 50%;
+        border-top: solid 2.5px $primary;
+        border-bottom: solid 2.5px $primary;
+        animation: loading-bar 3s forwards;
+    }
+    &__logo {
+        position: absolute;
+        z-index: 1;
+        width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+        fill: $white;
+        stroke: $anime-grey;
+        stroke-width: 1px;
+        & path:nth-child(1), path:nth-child(6), path:nth-child(7) {
+            @include letters-anime;
+            stroke-dasharray: 75px;
+            stroke-dashoffset: 75px;
+        }
+        & path:nth-child(5), path:nth-child(8) {
+            @include letters-anime;
+            stroke-dasharray: 115px;
+            stroke-dashoffset: 115px;
+        }
+        & path:nth-child(2), path:nth-child(4) {
+            @include letters-anime;
+            stroke-dasharray: 135px;
+            stroke-dashoffset: 135px;
+        }
+        & path:nth-child(3) {
+            @include letters-anime;
+            stroke-dasharray: 185px;
+            stroke-dashoffset: 185px;
+        }
     }
 }
