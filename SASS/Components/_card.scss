@@ -2,18 +2,17 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    background-color: $background-grey;
     width: 100%;
     height: 72px;
-    border-radius: 20px;
-    box-shadow: $shadow;
-    color: $black;
-    font-weight: 500;
     padding-left: 34px;
     padding-right: 20px;
+    background-color: $background-grey;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    font-weight: 500;
     .fa-solid {
-        color: $grey;
         margin-right: 20px;
+        color: $grey;
     }
     .fa-store {
         color: $primary;
@@ -23,14 +22,23 @@
 .card-restaurant {
     position: relative;
     z-index: 1;
-    
+    width: 100%;
+    height: 250px;   
     background-color: $white;
     border-radius: 15px;
-    width: 100%;
-    height: 250px;
-
-    box-shadow: $shadow;
-
+    box-shadow: $shadow;  
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0%;
+        width: 100%;
+        height: 250px;
+        border-radius: 15px;
+        box-shadow: $shadow-hover;
+        opacity: 0;
+        transition: opacity 400ms;
+    }  
     &:hover {
         &::after {
             opacity: 1;
@@ -38,26 +46,7 @@
         .card-restaurant__photo {
             opacity: 0.7;
         }
-    }
-    
-    &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0%;
-
-        border-radius: 15px;
-        box-shadow: $shadow-hover;
-        width: 100%;
-        height: 250px;
-        
-        opacity: 0;
-        transition: opacity 400ms;
-    }
-    
-    @include touchpad {
-        width: 100%;
-    }
+    }  
     &__photo {
         object-fit: cover;
         width: 100%;
@@ -98,48 +87,19 @@
 }
 
 .card-menu {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-
-    position: relative;
-    z-index: 1;
-
-    background-color: $background-grey;
     width: 100%;
     height: 68px;
+    background-color: $background-grey;
     border-radius: 15px;
     box-shadow: $shadow;
     overflow: hidden;
-    &::after {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-sizing: border-box;
-
-        content: "";
-        position: absolute;
-        z-index: -1;
-
-        background-color: $background-grey;
-        width: 100%;
-        height: 68px;
-        border-radius: 15px;
-        box-shadow: $shadow-hover;
-
-        opacity: 0;
-        transition: opacity 400ms;
-    }
-    &:hover {
-        cursor: pointer;
-        &::after {
-            opacity: 1;
-        }
-        .card-menu__price, .card-menu__validate {
-            transform: translateX(-59px);
-        }
-    }
+    opacity: 0;
     &__content {
         display: flex;
         flex-direction: column;
@@ -172,25 +132,22 @@
         transform: translateX(0);
         transition: transform 0.7s;
         &--text {
+            margin-left: 10px;
             font-size: 15px;
             font-weight: 700;
-            margin-left: 10px;
         }
     }
     &__validate {
+        position: absolute;
+        z-index: 1;
+        left: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-sizing: border-box;
-    
-        position: absolute;
-        left: 100%;
-        z-index: 1;
-    
-        background-color: $light-green;
+        box-sizing: border-box; 
         width: 59px;
         height: 68px;
-
+        background-color: $light-green;
         transform: translateX(0);
         transition: transform 0.7s;
         &--fa {
@@ -199,8 +156,14 @@
             height: 23px;
             border-radius: 12px;
             background-color: $white;
-            color: $light-green;
             font-size: 24px;
+            color: $light-green;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .card-menu__price, .card-menu__validate {
+            transform: translateX(-59px);
         }
     }
 }

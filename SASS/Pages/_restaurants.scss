@@ -1,28 +1,27 @@
 .photo-restaurant {
+    position: absolute;
     object-fit: cover;
+    top: 63px;
     width: 100%;
     height: 275px;
-    position: absolute;
-    top: 63px;
     @include touchpad {
-        height: 423px;
         top: 96px;
+        height: 423px;
     }
 }
 
 .restaurant-menu {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    position: relative;
-    box-sizing: border-box;
+    width: 100%;
+    margin-top: 220px;
+    padding: 40px 13px;
     background-color: $background-grey;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    width: 100%;
-    padding: 40px 13px;
-    margin-top: 220px;
     @include touchpad {
         margin-top: 343px;
     }
@@ -32,11 +31,11 @@
         margin-right: auto;
     }
     &__title {
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: baseline;
+        width: 100%;
         @include touchpad {
             justify-content: center;
             gap: 24px;
@@ -47,8 +46,8 @@
             font-weight: 400;
         }
         &--icon {
-            font-size: 21px;
             margin-right: 28px;
+            font-size: 21px;
         }
     }
 }
@@ -58,8 +57,6 @@
     flex-direction: column;
     width: 100%;
     gap: 12px;
-    transform: scale(0);
-    transform-origin: 50% 50%;
     @include touchpad {
         width: 634px;
     }
@@ -67,25 +64,38 @@
         display: flex;
         flex-direction: column;
         &--text {
-            font-weight: 300;
             font-size: 16px;
+            font-weight: 300;
+            opacity: 0;
         }
         &--line {
             border-bottom: 3px solid $light-green;
-            width: 40px;
+            width: 100%;
             height: 5px;
         }
     }  
 }
 
-.animation {
+.animation-bar {
     &-entrees {
-    animation: menu-opening 1.2s forwards ease-in-out;
+    animation: menu-bar 1s forwards ease-in-out 0.5s;
     }
     &-plats {
-    animation: menu-opening 1.2s forwards ease-in-out 1s;
+    animation: menu-bar 1s forwards ease-in-out 1.5s;
     }
     &-desserts {
-    animation: menu-opening 1.2s forwards ease-in-out 2s;
+    animation: menu-bar 1s forwards ease-in-out 2.5s;
+    }
+}
+
+.animation-menu-open {
+    &-entrees {
+    animation: menu-opening 1s forwards ease-in-out 0.5s;
+    }
+    &-plats {
+    animation: menu-opening 1s forwards ease-in-out 1.5s;
+    }
+    &-desserts {
+    animation: menu-opening 1s forwards ease-in-out 2.5s;
     }
 }

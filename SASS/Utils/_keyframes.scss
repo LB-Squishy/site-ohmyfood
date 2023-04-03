@@ -1,12 +1,3 @@
-@keyframes menu-opening{
-    from {
-        transform: scale(0); 
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
 /***** Loader *****/
 
 @keyframes loader-timer{
@@ -45,11 +36,28 @@
     }
 }
 
-@keyframes heart-anime {
+/***** MenuCard *****/
+
+@keyframes menu-bar{
     from {
-        transform: opacity(0);
+        width: 100%;
     }
     to {
-        transform: opacity(1);
+        width: 40px;
+    }
+}
+
+@keyframes menu-opening{
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
     }
 }
