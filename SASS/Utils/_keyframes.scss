@@ -44,3 +44,12 @@
         stroke-dashoffset: 0px;
     }
 }
+
+@keyframes heart-anime {
+    from {
+        transform: opacity(0);
+    }
+    to {
+        transform: opacity(1);
+    }
+}

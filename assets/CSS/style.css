@@ -69,6 +69,14 @@ h1, h2, h3, p {
     stroke-dashoffset: 0px;
   }
 }
+@keyframes heart-anime {
+  from {
+    transform: opacity(0);
+  }
+  to {
+    transform: opacity(1);
+  }
+}
 .btn-order {
   display: flex;
   justify-content: center;
@@ -104,23 +112,17 @@ h1, h2, h3, p {
   transition: opacity 400ms;
 }
 
-.heart-unchecked {
-  position: relative;
+.heart-anime {
+  -webkit-text-stroke: 1.5px #000000;
+  color: #ffffff;
 }
-.heart-checked {
-  position: absolute;
-  transform: translateX(-100%);
+.heart-anime:hover {
+  -webkit-text-stroke: 1px #9356dc;
   background: linear-gradient(180deg, #9356dc, #ff79da);
-  -moz-background: linear-gradient(180deg, #9356dc, #ff79da);
   background-clip: text;
-  -moz-background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
-  -moz-color: transparent;
-  opacity: 0;
-}
-.heart-checked:hover {
-  opacity: 1;
-  transition: opacity 400ms;
+  transition: color 400ms;
 }
 
 .card-fonctionnement {

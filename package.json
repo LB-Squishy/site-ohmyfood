@@ -1,14 +1,13 @@
 {
-  "name": "base-de-code",
+  "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "structure de base pour site",
+  "description": "Améliorer l'interface d'un site mobile avec des animations CSS",
   "main": "index.js",
 
   "scripts": {
     "build-autoprefix": "npm install autoprefixer postcss postcss-cli -g",
     "build-sass": "npm install -g sass",
 
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass ./sass/main.scss:./assets/css/style.css -w --style expanded",
     "prefix": "postcss ./assets/css/style.css --use autoprefixer -d ./assets/css/prefixed/",
 

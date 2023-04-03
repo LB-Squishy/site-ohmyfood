@@ -44,26 +44,15 @@
     }
 }
 
-.heart {
-    &-unchecked {
-        position: relative;
-    }
-    &-checked {
-        position: absolute;
-        transform: translateX(-100%);
+.heart-anime {
+    -webkit-text-stroke: 1.5px $black;
+    color: $white;
+    &:hover {
+        -webkit-text-stroke: 1px $primary;
         background: linear-gradient(180deg, $primary, $secondary);
-        -moz-background: linear-gradient(180deg, $primary, $secondary);
         background-clip: text;
-        -moz-background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
-        -moz-color: transparent;
-        opacity: 0;
-        &:hover {
-            opacity: 1;
-            transition: opacity 400ms;
-        }
-    }   
+        transition: color 400ms;
+    }
 }
-
-
-
