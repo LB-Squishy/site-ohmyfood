@@ -9,11 +9,11 @@
         content:"";
         position: absolute;
         z-index: -1;
-        width: 300px;
-        height: 130px;
         top: 50%;
         left: 50%;
         transform-origin: 0% 50%;
+        width: 300px;
+        height: 130px;
         border-top: solid 2.5px $primary;
         border-bottom: solid 2.5px $primary;
         animation: loading-bar 3s forwards;
@@ -24,13 +24,13 @@
     &__logo {
         position: absolute;
         z-index: 1;
-        width: 300px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 300px;
         background-color: $white;
         fill: $white;
-        stroke: $anime-grey;
+        stroke: $loader-grey;
         stroke-width: 1px;
         @include touchpad {
             width: 600px;

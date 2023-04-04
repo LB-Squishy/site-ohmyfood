@@ -1,57 +1,60 @@
 .btn-order {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     position: relative;
     z-index: 1;
-    
-    color: $white;
-    font-weight: 500;
-
-    background: $btn-gradiant;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
     width: 218px;
     height: 50px;
+    background: $btn-gradiant;
     border-radius: 25px;
     box-shadow: $shadow;
-    
+    font-weight: 500;
+    color: $white;   
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 218px;
+        height: 50px;  
+        background: $light-btn-gradiant;
+        border-radius: 25px;
+        box-shadow: $shadow-hover;      
+        font-weight: 500;
+        color: $white;
+        opacity: 0;
+        transition: opacity 400ms;
+    }
     &:hover {
         &::after {
             opacity: 1;
         }
     }
+}
 
-    &::after {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        content: "";
-        position: absolute;
-        z-index: -1;
-        
-        color: $white;
-        font-weight: 500;
-    
-        background: $light-btn-gradiant;
-        width: 218px;
-        height: 50px;
-        border-radius: 25px;
-        box-shadow: $shadow-hover;
-
-        opacity: 0;
-        transition: opacity 400ms;
-    }
+.card-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    background-color: $light-green;
+    font-size: 14px;
+    font-weight: 500;
+    color: $green;
 }
 
 .heart-anime {
-    -webkit-text-stroke: 1.5px $black;
+    -webkit-text-stroke: 1px $black;
     color: $white;
     &:hover {
-        -webkit-text-stroke: 1px $primary;
-        background: linear-gradient(180deg, $primary, $secondary);
+        background: $btn-gradiant;
         background-clip: text;
         -webkit-background-clip: text;
+        -webkit-text-stroke: 1px $primary;
         color: transparent;
         transition: color 400ms;
     }

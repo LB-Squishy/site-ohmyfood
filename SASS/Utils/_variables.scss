@@ -2,24 +2,22 @@
 
 $light-green: #99e2d0;
 $green: #008766;
-$light-blue: #89c8fa;
-$blue: #003a68;
-$light-primary: #f5edff;
 $primary: #9356dc;
 $secondary: #ff79da;
 $light-grey: #eaeaea;
 $background-grey: #f7f7f7;
 $grey: #494949;
-$anime-grey: #575757;
+$loader-grey: #575757;
 $white: #ffffff;
 $black: #000000;
 
 /***** Shadow list *****/
 
 $shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-$shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.281);
+$shadow-header: 0 2px 4px rgba(0, 0, 0, 0.15);
+$shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.28);
 
 /***** Gradiant *****/
 
 $btn-gradiant: linear-gradient(0deg, $primary, $secondary);
-$light-btn-gradiant: linear-gradient(0deg, lighten($primary, 6%), lighten($secondary, 6%));
+$light-btn-gradiant: linear-gradient(0deg, lighten($primary, 7%), lighten($secondary, 7%));

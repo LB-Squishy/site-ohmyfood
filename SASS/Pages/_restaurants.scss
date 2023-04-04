@@ -18,7 +18,7 @@
     box-sizing: border-box;
     gap: 40px;
     width: 100%;
-    margin-top: 220px;
+    margin: 220px auto 0 auto;
     padding: 40px 13px;
     background-color: $background-grey;
     border-top-left-radius: 40px;
@@ -27,9 +27,7 @@
         margin-top: 343px;
     }
     @include desktop {
-        width: 1024px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 1024px;        
     }
     &__title {
         display: flex;
@@ -70,9 +68,9 @@
             opacity: 0;
         }
         &--line {
-            border-bottom: 3px solid $light-green;
             width: 100%;
             height: 5px;
+            border-bottom: 3px solid $light-green;
         }
     }  
 }
@@ -91,12 +89,12 @@
 
 .animation-menu-open {
     &-entrees {
-    animation: menu-opening 1s forwards ease-in-out 0.5s;
+    animation: menu-opening 0.8s forwards ease-in-out 1.2s;
     }
     &-plats {
-    animation: menu-opening 1s forwards ease-in-out 1.5s;
+    animation: menu-opening 0.8s forwards ease-in-out 2.2s;
     }
     &-desserts {
-    animation: menu-opening 1s forwards ease-in-out 2.5s;
+    animation: menu-opening 0.8s forwards ease-in-out 3.2s;
     }
 }

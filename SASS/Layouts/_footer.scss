@@ -17,14 +17,15 @@
     @include touchpad {
         flex-direction: row-reverse;
         align-items: baseline;
+        margin: 65px 25px 30px auto;
     }
     @include desktop {
-        margin: auto 80px;
+        margin: 65px 65px 30px auto;
     }
     &__title {
+        margin: 0 0 16px 0;
         font-family: 'Shrikhand', cursive;
         font-size: 18px;
-        margin: 0 0 16px 0;
         @include touchpad {
             margin: 0;      
         }

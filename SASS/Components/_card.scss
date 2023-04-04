@@ -26,7 +26,7 @@
     height: 250px;   
     background-color: $white;
     border-radius: 15px;
-    box-shadow: $shadow;  
+    box-shadow: $shadow;
     &::after {
         content: "";
         position: absolute;
@@ -34,6 +34,7 @@
         top: 0%;
         width: 100%;
         height: 250px;
+        background-color: $white;
         border-radius: 15px;
         box-shadow: $shadow-hover;
         opacity: 0;
@@ -60,7 +61,7 @@
         justify-content: space-between;
         box-sizing: border-box;
         height: 77px;
-        padding: 12px 14px 12px 12px ;
+        padding: 16px 18px;
         &--text {
             display: flex;
             flex-direction: column;
@@ -75,12 +76,14 @@
         }
         &--tag {
             text-align: right;
+            align-items: center;
             i {
+                margin: 10px 10px 0 0;
                 font-size: 22px;
             }
             p {              
                 position: relative;
-                bottom: 200px;
+                bottom: 210px;
             }
         }
     }
@@ -108,9 +111,13 @@
         height: 100%;
         width: 80%;
         padding: 12px 0 12px 10px;
+        transition: width 0.7s;
         &--title {
             font-size: 18px;
             font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         &--text {
             font-size: 15px;
@@ -125,9 +132,8 @@
         flex-direction: column;
         justify-content: flex-end;
         box-sizing: border-box;
-        background-color: $background-grey;
-        height: 100%;
         width: 50px;
+        height: 100%;
         padding: 0 20px 12px 0;
         transform: translateX(0);
         transition: transform 0.7s;
@@ -165,17 +171,8 @@
         .card-menu__price, .card-menu__validate {
             transform: translateX(-59px);
         }
+        .card-menu__content {
+            width: 70%;
+        }
     }
-}
-
-.card-new {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $green;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: $light-green;
-    width: 80px;
-    height: 30px;
 }

@@ -1,11 +1,11 @@
 .search-loc {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 1;
-    height: 50px;
     width: auto;
+    height: 50px;
     background-color: $light-grey;
     &__dot {
         position: relative;
@@ -18,7 +18,6 @@
             background-color: $light-grey;
             color: $grey;
             &::placeholder {
-                outline: none;
                 color: $grey;             
             }
             &:focus {
@@ -28,7 +27,6 @@
         & input { 
             outline: none;          
             border: none;
-            color: $grey;
             font-size: 16px;
         }
     }
